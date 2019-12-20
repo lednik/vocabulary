@@ -25,6 +25,7 @@ export default {
         {value:'green', trans:'зеленый'}
       ],
       added : [],
+      isAdded : false,
       userTranslets : [],
       userTrans : [],
       isVis: false,
@@ -33,7 +34,13 @@ export default {
   },
   methods:{
     addWord (word){
-      this.added.push(word)
+      let first=this.isAdded
+      for(let i=0;i<this.added.length;i++){
+        if(word==this.added[i]){
+          this.isAdded=!first
+          }
+      }
+      if(this.isAdded==first){this.added.push(word)}
     },
     check(index){
       if(this.userTranslets[index]==this.added[index].trans){
