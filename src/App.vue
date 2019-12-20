@@ -8,7 +8,7 @@
     
     <p>Проверить слова : <button @click="isVis=!isVis">поехали</button></p>
     <ul v-show="isVis">
-      <li v-for="(word , index) of added">{{index}}{{word.value}}: <input  v-model="userTranslets[index]" @change="check(index)"  type="text">{{userTrans[index]}} </li>
+      <li v-for="(word , index) of added">{{index}}{{word.value}}: <input  v-model="userTranslets[index]" @input="check(index)"  type="text">{{userTrans[index]}} </li>
     </ul>
   </div>
 </template>
