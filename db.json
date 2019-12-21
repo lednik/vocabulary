@@ -9,6 +9,27 @@
       "value": "one",
       "trans": "один",
       "id": 2
+    },
+    {
+      "value": "two",
+      "trans": "два",
+      "id": 3
+    },
+    {
+      "value": "four",
+      "trans": "четыре",
+      "id": 4
+    },
+    {
+      "value": "six",
+      "trans": "шесть",
+      "id": 5
+    },
+    {
+      "value": "nine",
+      "trans": "девять",
+      "id": 6
     }
-  ]
+  ],
+  "userVacabulary": []
 }
