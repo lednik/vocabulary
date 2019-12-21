@@ -1,0 +1,14 @@
+{
+  "words": [
+    {
+      "value": "yellow",
+      "trans": "желтый",
+      "id": 1
+    },
+    {
+      "value": "one",
+      "trans": "один",
+      "id": 2
+    }
+  ]
+}
