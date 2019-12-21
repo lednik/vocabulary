@@ -29,6 +29,26 @@
       "value": "nine",
       "trans": "девять",
       "id": 6
+    },
+    {
+      "value": "ten",
+      "trans": "десять",
+      "id": 7
+    },
+    {
+      "value": "bird",
+      "trans": "bird",
+      "id": 8
+    },
+    {
+      "value": "clod",
+      "trans": "clod",
+      "id": 9
+    },
+    {
+      "value": "name",
+      "trans": "name",
+      "id": 10
     }
   ],
   "userVacabulary": [
@@ -46,6 +66,31 @@
       "value": "four",
       "trans": "четыре",
       "id": 3
+    },
+    {
+      "value": "yellow",
+      "trans": "желтый",
+      "id": 4
+    },
+    {
+      "value": "clod",
+      "trans": "clod",
+      "id": 5
+    },
+    {
+      "value": "bird",
+      "trans": "bird",
+      "id": 6
+    },
+    {
+      "value": "one",
+      "trans": "один",
+      "id": 7
+    },
+    {
+      "value": "name",
+      "trans": "name",
+      "id": 8
     }
   ]
 }

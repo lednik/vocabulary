@@ -45,7 +45,9 @@ export default {
             newWord : '',
             newTrans : '',
             ownWords : [],
-            words : []      
+            words : [],
+            resourseWords : null,
+            resourseOwnWords : null
     }
   },
   methods:{
@@ -54,48 +56,25 @@ export default {
         value: this.newWord,
         trans: this.newTrans
       }
-      console.log(nWord)
-      this.$http.post('http://localhost:3000/words',nWord)
-      .then(response =>{
-        return response.json()
-      })
-      .then(getWord =>{
-        console.log(getWord)
-      })
+      this.resourseWords.save({},nWord)
     },
     getVacabulary (){
-      this.$http.get('http://localhost:3000/words')
-      .then(response =>{
-        return response.json()
-      })
-      .then(getAllWords =>{
-        this.words = getAllWords
-        console.log(getAllWords)
-      })
+      this.resourseWords.get().then(response => response.json()).then(words => this.words = words)
     },
     addToOwnVac (word) {
       const addedWord = {
         value : word.value,
         trans : word.trans
       }
-      this.$http.post('http://localhost:3000/userVacabulary',addedWord)
-      .then(response =>{
-        return response.json()
-      })
-      .then(getOwnWord =>{
-        console.log(getOwnWord)
-      })
+      this.resourseOwnWords.save({},addedWord)
     },
     getOwnList (){
-      this.$http.get('http://localhost:3000/userVacabulary')
-      .then(response =>{
-        return response.json()
-      })
-      .then(getAllList =>{
-        this.ownWords = getAllList
-        console.log(this.ownWords)
-      })
+      this.resourseOwnWords.get().then(response => response.json()).then(words => this.ownWords = words)
     }
+  },
+  created(){
+    this.resourseWords = this.$resource('http://localhost:3000/words')
+    this.resourseOwnWords = this.$resource('http://localhost:3000/userVacabulary')
   }
 }
 </script>
