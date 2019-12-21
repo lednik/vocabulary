@@ -73,8 +73,8 @@ export default {
     }
   },
   created(){
-    this.resourseWords = this.$resource('http://localhost:3000/words')
-    this.resourseOwnWords = this.$resource('http://localhost:3000/userVacabulary')
+    this.resourseWords = this.$resource('words')
+    this.resourseOwnWords = this.$resource('userVacabulary')
   }
 }
 </script>
