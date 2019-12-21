@@ -23,6 +23,16 @@
       </ul>
 
     </div>
+    <div class="own">
+      <button @click="getOwnList">Загрузить cвой справочник</button>
+      <ul>
+        <li 
+        v-for="word in ownWords"
+        :key="word.id"
+        > <strong>{{word.value}}</strong> : {{word.trans}}
+        </li>
+      </ul>
+    </div>
 
   </div>
 </template>
@@ -34,7 +44,8 @@ export default {
     return {
             newWord : '',
             newTrans : '',
-            words : []
+            ownWords : [],
+            words : []      
     }
   },
   methods:{
@@ -59,20 +70,30 @@ export default {
       })
       .then(getAllWords =>{
         this.words = getAllWords
+        console.log(getAllWords)
       })
     },
-    addToOwnVac : (word) =>{
+    addToOwnVac (word) {
       const addedWord = {
         value : word.value,
         trans : word.trans
       }
-      console.log(addedWord)
       this.$http.post('http://localhost:3000/userVacabulary',addedWord)
       .then(response =>{
         return response.json()
       })
-      .then(getWord =>{
-        console.log(getWord)
+      .then(getOwnWord =>{
+        console.log(getOwnWord)
+      })
+    },
+    getOwnList (){
+      this.$http.get('http://localhost:3000/userVacabulary')
+      .then(response =>{
+        return response.json()
+      })
+      .then(getAllList =>{
+        this.ownWords = getAllList
+        console.log(this.ownWords)
       })
     }
   }

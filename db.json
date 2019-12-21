@@ -31,5 +31,21 @@
       "id": 6
     }
   ],
-  "userVacabulary": []
+  "userVacabulary": [
+    {
+      "value": "nine",
+      "trans": "девять",
+      "id": 1
+    },
+    {
+      "value": "six",
+      "trans": "шесть",
+      "id": 2
+    },
+    {
+      "value": "four",
+      "trans": "четыре",
+      "id": 3
+    }
+  ]
 }
