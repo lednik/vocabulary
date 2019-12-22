@@ -49,6 +49,21 @@
       "value": "name",
       "trans": "name",
       "id": 10
+    },
+    {
+      "value": "three",
+      "trans": "три",
+      "id": 11
+    },
+    {
+      "value": "zero",
+      "trans": "ноль",
+      "id": 12
+    },
+    {
+      "value": "www",
+      "trans": "www",
+      "id": 13
     }
   ],
   "userVacabulary": [
@@ -91,6 +106,31 @@
       "value": "name",
       "trans": "name",
       "id": 8
+    },
+    {
+      "value": "two",
+      "trans": "два",
+      "id": 9
+    },
+    {
+      "value": "three",
+      "trans": "три",
+      "id": 10
+    },
+    {
+      "value": "zero",
+      "trans": "ноль",
+      "id": 11
+    },
+    {
+      "value": "zero",
+      "trans": "ноль",
+      "id": 12
+    },
+    {
+      "value": "www",
+      "trans": "www",
+      "id": 13
     }
   ]
 }
